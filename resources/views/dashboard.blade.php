@@ -9,10 +9,11 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    @can('user') //essa diretiva @can faz somente quem for user ver isto na view
-                        Dados do usuário.
+                <!-- diretiva @//can faz somente quem for user ver isto na view -->    
+                @can('user') 
+                        dados do usuário 
                     @elsecan('admin')
-                        Somente o administrador pode ver isso. 
+                        somente admin 
                     @endcan
                 </div>
             </div>
