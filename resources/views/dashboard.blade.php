@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            Bem vindo, {{ Auth::user()->name }}
         </h2>
     </x-slot>
 
@@ -11,9 +11,9 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                 <!-- diretiva @//can faz somente quem for user ver isto na view -->    
                 @can('user') 
-                        dados do usuário 
+                        Conteúdo visível somente para usuários. 
                     @elsecan('admin')
-                        somente admin 
+                        Conteúdo visível somente para admin. 
                     @endcan
                 </div>
             </div>
