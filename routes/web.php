@@ -18,4 +18,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
+Route::get('/dados', function () {
+    return view('dados');
+})->middleware(['auth'])->name('dados');
+
+
+Route::get('/opcoes', function () {
+    return view('opcoes');
+})->middleware(['auth'])->name('opcoes');
+
 require __DIR__.'/auth.php';

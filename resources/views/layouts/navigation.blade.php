@@ -13,12 +13,12 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('Início') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('dados')" :active="request()->routeIs('dados')">
                         {{ __('Dados') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('opcoes')" :active="request()->routeIs('opcoes')">
                         {{ __('Opções') }}
                     </x-nav-link>
                 </div>
@@ -39,9 +39,14 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('logout')">
+                        <x-dropdown-link :href="route('dados')">
                                 {{ __('Dados') }}
                             </x-dropdown-link>
+
+                            <x-dropdown-link :href="route('opcoes')">
+                                {{ __('Opções') }}
+                            </x-dropdown-link>
+
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">

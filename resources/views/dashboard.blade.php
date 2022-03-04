@@ -9,12 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                <!-- diretiva @//can faz somente quem for user ver isto na view -->    
-                @can('user') 
-                        Conteúdo visível somente para usuários. 
-                    @elsecan('admin')
-                        Conteúdo visível somente para admin. 
-                    @endcan
+                Página inicial do sistema. Explicação do que foi utilizado (breeze, spatie, permissão e backend). Um readme dentro do site.
                 </div>
             </div>
         </div>
