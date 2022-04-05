@@ -51,4 +51,19 @@ class RegisteredUserController extends Controller
 
         return redirect(RouteServiceProvider::HOME);
     }
+
+    public function altPermissao(Request $request)
+    {
+        $user = Auth::user();
+        $novaPermissao = $request->novaPermissao;
+        if($novaPermissao == 'admin'){
+            $user->revokePermissionTo('user');
+            $user->givePermissionTo('admin');
+        }else{
+            $user->revokePermissionTo('admin');
+            $user->givePermissionTo('user');
+        }
+               
+        return view('opcoes');
+    }
 }

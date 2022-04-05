@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisteredUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,5 +28,7 @@ Route::get('/dados', function () {
 Route::get('/opcoes', function () {
     return view('opcoes');
 })->middleware(['auth'])->name('opcoes');
+
+Route::post('/altPermissao', [RegisteredUserController::class, 'altPermissao']);
 
 require __DIR__.'/auth.php';

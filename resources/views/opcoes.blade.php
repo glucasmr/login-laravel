@@ -19,7 +19,7 @@
                     ?>
                     Altere a permissão da sua conta: 
                     <div>
-                        <form id="formPermissao">
+                        <form id="formPermissao" name="formPermissao" method="POST" action="{{url("altPermissao")}}">
                         @csrf
                             <div class="form-check">
                                 <input class="form-check-input appearance-none rounded-full h-4 w-4 border border-gray-300 bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left mr-2 cursor-pointer" type="radio" value="user" name="novaPermissao" id="flexRadioDefault1" <?php echo ($permissaoAtual == "user") ? "checked" : null; ?>/>
@@ -37,27 +37,6 @@
                             <input type="submit" value="Alterar" class="px-4 py-1 text-sm font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"/>
                         </form>
                     </div>
-
-                    <div id="resposta"></div>
-               
-                    <script>  
-                        
-                        var urlPermissao= '{{url("auth/alternarPermissao.php")}}';
-                            $('#formPermissao').submit(function(e){
-                                e.preventDefault();   
-                                    var u_novaPermissao = $('input[name="novaPermissao"]:checked').val();  
-                                    // alert(u_novaPermissao);
-                                    $.ajax({
-                                    url:urlPermissao,
-                                    method: 'POST',
-                                    data:{novaPermissao: u_novaPermissao},
-                                    sucess:function(data){
-                                            $('#resposta').html(data);   
-                                            alert('Permissão atualizada para '+u_novaPermissao+'!');
-                                    }
-                                })  
-                            });  
-                    </script>
                 </div>
             </div>
         </div>
