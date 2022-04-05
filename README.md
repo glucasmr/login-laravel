@@ -2,5 +2,5 @@
 
 ## Login project with Laravel breeze
 
-[Laravel Breeze](https://laravel.com/docs/9.x/starter-kits) is a starter kit built in the framework for authentication including login, registration, password reset, email verification, and password confirmation. In this mini project, login, registration and permission levels (using spatie) were implemented, and custom views for each permission as well. 
+[Laravel Breeze](https://laravel.com/docs/9.x/starter-kits) is a starter kit built in the framework for authentication including login, registration, password reset, email verification, and password confirmation. In this mini project, login, registration and permission levels (using [Spatie](https://spatie.be/docs/laravel-permission/v5/introduction)) were implemented, and custom views for each permission as well. 
 
