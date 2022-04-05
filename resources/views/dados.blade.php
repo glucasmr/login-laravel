@@ -16,12 +16,20 @@
                 <br>
                 Email: {{ Auth::user()->email }}    
                 <br>
+                Data da criação: {{ Auth::user()->created_at }}    
+                <br>
+                Ultima alteração: {{ Auth::user()->updated_at }}    
+                <br>
                 Permissão: Usuário
                 
                 @elsecan('admin')
                 Nome do usuário: {{ Auth::user()->name }} 
                 <br>
                 Email do usuário: {{ Auth::user()->email }}
+                <br>
+                Data da criação: {{ Auth::user()->created_at }}    
+                <br>
+                Ultima alteração: {{ Auth::user()->updated_at }}    
                 <br>
                 Permissão: Admin
                 @endcan
